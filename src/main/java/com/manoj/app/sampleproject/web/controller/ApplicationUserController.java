@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.manoj.app.sampleproject.business.ApplicationUserService;
+import com.manoj.app.sampleproject.web.exceptions.RequestValidationException;
 import com.manoj.app.sampleproject.web.request.UserRequest;
-import com.manoj.web.exception.RequestValidationException;
 
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
