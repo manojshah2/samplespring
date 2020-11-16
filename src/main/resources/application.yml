@@ -1,0 +1,25 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: manoj-service
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+
+amazon.dynamodb.endpoint: http://localhost:8000/
+amazon.aws.accesskey: key
+amazon.aws.secretkey: key2
+
+spring.jackson.default-property-inclusion: NON_NULL
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      host: mongodb
+      uri: mongodb+srv://dbManoj:v2qv57pNBzYeb21q@manojcluster.halxo.mongodb.net/manoj?retryWrites=true&w=majority
+      database: manoj
+      auto-index-creation: true
