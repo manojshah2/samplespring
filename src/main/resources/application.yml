@@ -18,8 +18,14 @@ spring.jackson.default-property-inclusion: NON_NULL
 spring:
   profiles: dev
   data:
-    mongodb:
-      host: mongodb
+    mongodb:      
       uri: mongodb+srv://dbManoj:v2qv57pNBzYeb21q@manojcluster.halxo.mongodb.net/manoj?retryWrites=true&w=majority
-      database: manoj
-      auto-index-creation: true
+      database: manoj      
+  rabbitmq:
+    host: toad.rmq.cloudamqp.com
+    port: 5672
+    virtual-host: efqgdzpx
+    username: efqgdzpx
+    password: uiiphqstv4wfz7kM4tx2vsBGBpuScnz8
+    
+  
