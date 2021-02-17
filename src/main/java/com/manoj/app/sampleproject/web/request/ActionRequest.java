@@ -29,5 +29,8 @@ public class ActionRequest {
 	private String name;
 	
 	@NotNull
+	private String pin;
+	
+	@NotNull
 	private String value;
 }

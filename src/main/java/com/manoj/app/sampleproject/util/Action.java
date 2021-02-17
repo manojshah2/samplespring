@@ -19,5 +19,7 @@ public class Action {
 	
 	private String name;
 	
+	private String pin;
+	
 	private String value;
 }

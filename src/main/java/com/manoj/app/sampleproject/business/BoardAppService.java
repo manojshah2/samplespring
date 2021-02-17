@@ -38,7 +38,7 @@ public class BoardAppService implements BaseService<BoardApp, BoardAppRequest> {
 		Predicate predicate = predicateService.getPredicateFromParameters(params, BoardApp.class);
 		return predicate != null ? repository.findAll(predicate, pageable) : repository.findAll(pageable);
 	}
-
+	
 	@Override
 	@Transactional(readOnly = true)
 	public BoardApp getById(String id) {
@@ -52,7 +52,7 @@ public class BoardAppService implements BaseService<BoardApp, BoardAppRequest> {
 		// TODO Auto-generated method stub
 		BoardApp boardApp = BoardApp.builder()
 				.name(request.getName())
-				.boardId(request.getBoardId())
+				.boardId(request.getBoardId())				
 				.build();
 		return repository.save(boardApp);
 	}
@@ -68,6 +68,7 @@ public class BoardAppService implements BaseService<BoardApp, BoardAppRequest> {
 		actions.stream().forEach(_action->{			
 			Action _a=Action.builder()
 					.name(_action.getName())
+					.pin(_action.getPin())
 					.id(_action.getId())
 					.value(_action.getValue())
 					.build();
