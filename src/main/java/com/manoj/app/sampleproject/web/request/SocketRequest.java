@@ -1,8 +1,5 @@
+
 package com.manoj.app.sampleproject.web.request;
-
-import java.util.List;
-
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -21,20 +18,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@ApiModel(description = "Request to create ActionRequest")
-public class ActionRequest {
+@ApiModel(description = "Request to create SocketRequest")
+public class SocketRequest {
 
-	@NotNull
-	private String id;
-	
-	@NotNull
 	private String name;
 	
-	
-	private String pin;
-	
-	
 	private String value;
-	
-	private List<SocketRequest> socketValue; 
 }

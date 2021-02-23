@@ -52,7 +52,8 @@ public class BoardAppService implements BaseService<BoardApp, BoardAppRequest> {
 		// TODO Auto-generated method stub
 		BoardApp boardApp = BoardApp.builder()
 				.name(request.getName())
-				.boardId(request.getBoardId())				
+				.boardId(request.getBoardId())	
+				
 				.build();
 		return repository.save(boardApp);
 	}
@@ -71,6 +72,7 @@ public class BoardAppService implements BaseService<BoardApp, BoardAppRequest> {
 					.pin(_action.getPin())
 					.id(_action.getId())
 					.value(_action.getValue())
+					.socketValue(_action.getSocketValue())
 					.build();
 			action.add(_a);
 		});

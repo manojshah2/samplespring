@@ -1,5 +1,9 @@
 package com.manoj.app.sampleproject.util;
 
+import java.util.List;
+
+import com.manoj.app.sampleproject.web.request.SocketRequest;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,4 +26,6 @@ public class Action {
 	private String pin;
 	
 	private String value;
+	
+	private List<SocketRequest> socketValue; 
 }
